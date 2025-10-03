@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -49,6 +50,16 @@ func registerRoutes(r *gin.Engine) {
 
 		// Render template with config data
 		c.HTML(200, "index.tmpl", homepage)
+	})
+
+	//GM-tools rerouted to old website for now
+	r.GET("/gm", func(c *gin.Context) {
+		c.Redirect(http.StatusFound, "https://dmtools.undeadtoken.com")
+	})
+
+	// RASA rerouted to old website for now
+	r.GET("/rasa", func(c *gin.Context) {
+		c.Redirect(http.StatusFound, "https://undeadtoken.com/projects/RASA.html")
 	})
 
 }
