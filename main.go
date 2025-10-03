@@ -10,10 +10,8 @@ import (
 func main() {
 
 	// run the server with the "run" tag present
-	if len(os.Args) > 1 && os.Args[1] == "-run" {
-		if len(os.Args) > 2 {
-			runServer()
-		}
+	if len(os.Args) > 1 && os.Args[1] == "run" {
+		runServer()
 	}
 
 	// --tagger filestart make a template from html file (also I know this is a teribble name)

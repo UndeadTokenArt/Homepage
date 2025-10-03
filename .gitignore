@@ -1,2 +1,3 @@
 *.exe
 Homepage
+/static/*

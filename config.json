@@ -1,73 +1,110 @@
 {
-  "title": "",
+  "title": "Stephen Moore | Web Developer",
   "metaDescription": "",
-  "firstName": "",
-  "lastName": "",
-  "jobTitle": "",
-  "tagline": "",
-  "location": "",
-  "email": "",
-  "phone": "",
+  "firstName": "Stephen",
+  "lastName": "Moore",
+  "jobTitle": "Developer",
+  "tagline": "Full Stack",
+  "location": "Clackamas, OR",
+  "email": "MooreStephenC@Gmail.com",
+  "phone": "503-360-7678",
   "heroDescription": "",
-  "profileImage": "",
-  "availableForWork": false,
-  "aboutTitle": "",
-  "aboutIntro": "",
+  "profileImage": "static/gallery/profilephoto.png",
+  "availableForWork": true,
+  "aboutTitle": "About Me",
+  "aboutIntro": "I'm passionate about creating beautiful, functional websites and applications.I am father of three wonderful kids and a husband to a beautiful wife. I love spending time with my family, playing games, and exploring the great outdoors.",
   "aboutParagraphs": [
-    "",
-    "",
-    ""
+    "With over 3 years of experience in development, I specialize in creating responsive, user-friendly websites and web applications. My approach combines technical expertise with creative problem-solving to deliver exceptional results.",
+    "I believe in writing clean, efficient code and staying up-to-date with the latest technologies and best practices in the industry. My goal is to create digital experiences that not only look great but also perform exceptionally well.",
+    "When I'm not coding, you can find me hiking, reading sci-fi novels, experimenting with new recipes in the kitchen, and playing games with my family."
   ],
   "skills": [
-    "",
-    "",
-    "",
-    "",
-    ""
+    "Go programming language",
+    "Python",
+    "JavaScript",
+    "Git version managing",
+    "AWS",
+    "Docker Containers",
+    "SQL database",
+    "Geolocation"
   ],
   "experience": [
     {
-      "title": "",
-      "company": "",
-      "year": "",
-      "description": ""
+      "title": "Web Designer and developer",
+      "company": "L.I Realty",
+      "year": "2020",
+      "description": "Leading on front-end development"
     }
   ],
   "projects": [
     {
-      "title": "",
-      "description": "",
-      "image": "",
+      "title": "This site",
+      "description": "Runs on an AWS-ECS cluster, yes its overkill, I could run it on a single EC2 server, but I am proving a point",
+      "image": "static/gallery/Homepage.png",
       "technologies": [
-        "",
-        ""
+        "GO",
+        "Gin",
+        "Docker",
+        "ECS",
+        "AWS",
+        "JavaScript"
       ],
-      "projectURL": "",
-      "githubURL": "",
-      "liveURL": ""
+      "projectURL": "https://www.undeadToken.com",
+      "githubURL": "https://github.com/UndeadTokenArt/Homepage",
+      "liveURL": "https://www.undeadToken.com"
+    },
+    {
+      "title": "Routing and Sequence Analizer",
+      "description": "Routing and Sequence Analizer",
+      "image": "static/gallery/SequenceAnalizer.jpg",
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "geolocation",
+        "html",
+        "css",
+        "JavaScript"
+      ],
+      "projectURL": "/projects/RASA.html",
+      "githubURL": "https://github.com/UndeadTokenArt/WMscheduler",
+      "liveURL": "/projects/RASA.html"
+    },
+    {
+      "title": "GameMaster tools",
+      "description": "Initative and battle map display",
+      "image": "static/gallery/GameMasterTools.jpg",
+      "technologies": [
+        "PHP",
+        "html",
+        "css",
+        "JavaScript"
+      ],
+      "projectURL": "projects/Viewer.html",
+      "githubURL": "https://github.com/UndeadTokenArt/InitiativeDrop",
+      "liveURL": "projects/Viewer.html"
     }
   ],
   "socialLinks": {
-    "github": "",
-    "linkedin": "",
-    "email": ""
+    "github": "https://github.com/undeadtokenart/",
+    "linkedin": "https://www.linkedin.com/in/stephen-c-moore/",
+    "email": "MooreStephenC@Gmail.com"
   },
   "navItems": [
     {
-      "text": "",
-      "href": ""
+      "text": "About Me",
+      "href": "#about"
     },
     {
-      "text": "",
-      "href": ""
+      "text": "Projects",
+      "href": "#projects"
     },
     {
-      "text": "",
-      "href": ""
+      "text": "Contact",
+      "href": "#contact"
     },
     {
-      "text": "",
-      "href": ""
+      "text": "Home",
+      "href": "#home"
     }
   ]
 }
