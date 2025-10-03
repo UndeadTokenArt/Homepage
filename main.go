@@ -9,8 +9,8 @@ import (
 
 func main() {
 
-	// run the server with the run tag present
-	if len(os.Args) > 1 && os.Args[1] == "run" {
+	// run the server with the "run" tag present
+	if len(os.Args) > 1 && os.Args[1] == "-run" {
 		if len(os.Args) > 2 {
 			runServer()
 		}
@@ -26,6 +26,9 @@ func main() {
 		if len(os.Args) < 2 {
 			log.Panicln("File name was not provided")
 		}
-		templatetagger.TagTemplateText(file)
+		err := templatetagger.TagTemplateText(file)
+		if err != nil {
+			log.Println(err)
+		}
 	}
 }

@@ -1,0 +1,73 @@
+{
+  "title": "",
+  "metaDescription": "",
+  "firstName": "",
+  "lastName": "",
+  "jobTitle": "",
+  "tagline": "",
+  "location": "",
+  "email": "",
+  "phone": "",
+  "heroDescription": "",
+  "profileImage": "",
+  "availableForWork": false,
+  "aboutTitle": "",
+  "aboutIntro": "",
+  "aboutParagraphs": [
+    "",
+    "",
+    ""
+  ],
+  "skills": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "experience": [
+    {
+      "title": "",
+      "company": "",
+      "year": "",
+      "description": ""
+    }
+  ],
+  "projects": [
+    {
+      "title": "",
+      "description": "",
+      "image": "",
+      "technologies": [
+        "",
+        ""
+      ],
+      "projectURL": "",
+      "githubURL": "",
+      "liveURL": ""
+    }
+  ],
+  "socialLinks": {
+    "github": "",
+    "linkedin": "",
+    "email": ""
+  },
+  "navItems": [
+    {
+      "text": "",
+      "href": ""
+    },
+    {
+      "text": "",
+      "href": ""
+    },
+    {
+      "text": "",
+      "href": ""
+    },
+    {
+      "text": "",
+      "href": ""
+    }
+  ]
+}

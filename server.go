@@ -37,9 +37,18 @@ func runServer() {
 func registerRoutes(r *gin.Engine) {
 	// Home
 	r.GET("/", func(c *gin.Context) {
-		c.HTML(200, "index.tmpl", gin.H{
-			"title": "Home Page",
-		})
+		// Load config data
+		homepage, err := ParseConfigFile("config.json")
+		if err != nil {
+			log.Printf("Error loading config: %v", err)
+			c.HTML(500, "index.tmpl", gin.H{
+				"error": "Failed to load configuration",
+			})
+			return
+		}
+
+		// Render template with config data
+		c.HTML(200, "index.tmpl", homepage)
 	})
 
 }
