@@ -65,9 +65,9 @@
         "css",
         "JavaScript"
       ],
-      "projectURL": "/projects/RASA.html",
+      "projectURL": "/rasa",
       "githubURL": "https://github.com/UndeadTokenArt/WMscheduler",
-      "liveURL": "/projects/RASA.html"
+      "liveURL": "/rasa"
     },
     {
       "title": "GameMaster tools",
@@ -79,9 +79,9 @@
         "css",
         "JavaScript"
       ],
-      "projectURL": "projects/Viewer.html",
+      "projectURL": "/gm",
       "githubURL": "https://github.com/UndeadTokenArt/InitiativeDrop",
-      "liveURL": "projects/Viewer.html"
+      "liveURL": "/gm"
     }
   ],
   "socialLinks": {
