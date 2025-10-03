@@ -4,32 +4,28 @@ import (
 	"log"
 	"os"
 
-	"github.com/gin-gonic/gin"
+	templatetagger "github.com/undeadtokenart/Homepage/templateTagger"
 )
 
 func main() {
-	// Set Gin to release mode for production
-	gin.SetMode(gin.ReleaseMode)
-	r := gin.Default()
 
-	// Templates from templates folder
-	r.LoadHTMLGlob("templates/*")
-
-	// Static files from static folder
-	r.Static("/static", "static")
-
-	// Routes
-	registerRoutes(r)
-
-	// Server Port set by environment variable or default to 8080
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
-		log.Printf("defaulting to port %s", port)
+	// run the server with the run tag present
+	if len(os.Args) > 1 && os.Args[1] == "run" {
+		if len(os.Args) > 2 {
+			runServer()
+		}
 	}
 
-	// Run server
-	if err := r.Run(":" + port); err != nil {
-		log.Fatal(err)
+	// --tagger filestart make a template from html file (also I know this is a teribble name)
+	if len(os.Args) > 1 && os.Args[1] == "--tagger" {
+		file := ""
+		filePath := "templates/html/"
+		if len(os.Args) > 2 {
+			file = filePath + os.Args[2]
+		}
+		if len(os.Args) < 2 {
+			log.Panicln("File name was not provided")
+		}
+		templatetagger.TagTemplateText(file)
 	}
 }
