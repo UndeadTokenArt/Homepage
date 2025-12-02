@@ -39,7 +39,7 @@
   "projects": [
     {
       "title": "This site",
-      "description": "Runs on an AWS-ECS cluster, yes its overkill, I could run it on a single EC2 server, but I am proving a point",
+      "description": "Personal portfolio site",
       "image": "static/gallery/Homepage.png",
       "technologies": [
         "GO",
@@ -52,36 +52,6 @@
       "projectURL": "https://www.undeadToken.com",
       "githubURL": "https://github.com/UndeadTokenArt/Homepage",
       "liveURL": "https://www.undeadToken.com"
-    },
-    {
-      "title": "Routing and Sequence Analizer",
-      "description": "Routing and Sequence Analizer",
-      "image": "static/gallery/SequenceAnalizer.jpg",
-      "technologies": [
-        "PHP",
-        "MySQL",
-        "geolocation",
-        "html",
-        "css",
-        "JavaScript"
-      ],
-      "projectURL": "/rasa",
-      "githubURL": "https://github.com/UndeadTokenArt/WMscheduler",
-      "liveURL": "/rasa"
-    },
-    {
-      "title": "GameMaster tools",
-      "description": "Initative and battle map display",
-      "image": "static/gallery/GameMasterTools.jpg",
-      "technologies": [
-        "PHP",
-        "html",
-        "css",
-        "JavaScript"
-      ],
-      "projectURL": "/gm",
-      "githubURL": "https://github.com/UndeadTokenArt/InitiativeDrop",
-      "liveURL": "/gm"
     }
   ],
   "socialLinks": {
