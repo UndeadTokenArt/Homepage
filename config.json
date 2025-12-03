@@ -25,8 +25,7 @@
     "Git version managing",
     "AWS",
     "Docker Containers",
-    "SQL database",
-    "Geolocation"
+    "SQL database"
   ],
   "experience": [
     {
@@ -52,6 +51,20 @@
       "projectURL": "https://www.undeadToken.com",
       "githubURL": "https://github.com/UndeadTokenArt/Homepage",
       "liveURL": "https://www.undeadToken.com"
+    },
+    {
+      "title": "Game Master Tools",
+      "description": "a feature rich web application for managing tabletop RPG campaigns",
+      "image": "static/gallery/gmTools.png",
+      "technologies": [
+        "GO",
+        "Gin",
+        "Docker",
+        "JavaScript"
+      ],
+      "projectURL": "/gmTools",
+      "githubURL": "https://github.com/UndeadTokenArt/agentTracker",
+      "liveURL": "https://www.undeadToken.com/gmTools"
     }
   ],
   "socialLinks": {

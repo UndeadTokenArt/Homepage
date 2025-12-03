@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -33,33 +32,4 @@ func runServer() {
 	if err := r.Run(":" + port); err != nil {
 		log.Fatal(err)
 	}
-}
-
-func registerRoutes(r *gin.Engine) {
-	// Home
-	r.GET("/", func(c *gin.Context) {
-		// Load config data
-		homepage, err := ParseConfigFile("config.json")
-		if err != nil {
-			log.Printf("Error loading config: %v", err)
-			c.HTML(500, "index.tmpl", gin.H{
-				"error": "Failed to load configuration",
-			})
-			return
-		}
-
-		// Render template with config data
-		c.HTML(200, "index.tmpl", homepage)
-	})
-
-	//GM-tools rerouted to old website for now
-	r.GET("/gm", func(c *gin.Context) {
-		c.Redirect(http.StatusFound, "https://dmtools.undeadtoken.com")
-	})
-
-	// RASA rerouted to old website for now
-	r.GET("/rasa", func(c *gin.Context) {
-		c.Redirect(http.StatusFound, "https://undeadtoken.com/projects/RASA.html")
-	})
-
 }
