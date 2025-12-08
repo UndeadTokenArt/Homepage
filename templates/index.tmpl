@@ -159,7 +159,7 @@
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="text-xl font-bold">{{.Title}}</h3>
-                        <span class="text-xs bg-blue/10 text-blue px-2 py-1 rounded">{{range $i, $tech := .Technologies}}{{if $i}}, {{end}}{{$tech}}{{end}}</span>
+                        <span class="text-xs bg-blue/10 text-blue px-4 py-4 rounded-lg">{{range $i, $tech := .Technologies}}{{if $i}}, {{end}}{{$tech}}{{end}}</span>
                     </div>
                     <p class="text-gray-400 mb-4">
                         {{.Description}}
@@ -189,8 +189,8 @@
 
         
         <div class="text-center mt-16">
-            <a href="#" class="inline-flex items-center px-6 py-3 border border-blue text-blue hover:bg-blue/10 rounded-lg font-medium transition duration-300">
-                <i class="fab fa-github mr-2"></i> View All Projects on GitHub
+            <a href="#" class="items-center px-4 py-4 border border-blue text-blue hover:bg-blue/10 rounded-lg font-medium">
+                View All Projects on GitHub 
             </a>
         </div>
     </section>
