@@ -23,7 +23,8 @@
     "Python",
     "JavaScript",
     "Git version managing",
-    "AWS",
+    "VPS management",
+    "HTML & CSS",
     "Docker Containers",
     "SQL database"
   ],
@@ -39,13 +40,12 @@
     {
       "title": "This site",
       "description": "Personal portfolio site",
-      "image": "static/gallery/Homepage.png",
+      "image": "static/icons/feather/home.svg",
       "technologies": [
         "GO",
-        "Gin",
+        "Gin framework",
         "Docker",
-        "ECS",
-        "AWS",
+        "VPS",
         "JavaScript"
       ],
       "projectURL": "https://www.undeadToken.com",
@@ -55,10 +55,10 @@
     {
       "title": "Game Master Tools",
       "description": "a feature rich web application for managing tabletop RPG campaigns",
-      "image": "static/gallery/gmTools.png",
+      "image": "static/icons/feather/users.svg",
       "technologies": [
         "GO",
-        "Gin",
+        "Gin framework",
         "Docker",
         "JavaScript"
       ],

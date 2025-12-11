@@ -2,3 +2,5 @@
 Homepage
 /static/gallery/
 .vscode
+*.tar
+/builds

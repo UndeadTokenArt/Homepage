@@ -16,7 +16,6 @@
 .text-blue {
   color: var(--blue);
 }
-
 .text-green {
   color: var(--green);
 }
@@ -614,6 +613,10 @@ F .transition {
 
 .object-cover {
   object-fit: cover;
+}
+
+.object-center {
+  object-position: center;
 }
 
 .min-h-screen {

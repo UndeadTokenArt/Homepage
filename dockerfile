@@ -1,5 +1,5 @@
 # Use an official Go runtime as a parent image
-FROM golang:1.23-alpine AS builder
+FROM golang:1.25 AS builder
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -14,7 +14,8 @@ RUN go mod download
 COPY . .
 
 # Build the application
-RUN go build -o main .
+ENV CGO_ENABLED=0 GOOS=linux GOARCH=amd64
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o main .
 
 # Use a smaller base image for the final stage
 FROM alpine:latest
