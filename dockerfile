@@ -14,8 +14,7 @@ RUN go mod download
 COPY . .
 
 # Build the application
-ENV CGO_ENABLED=0 GOOS=linux GOARCH=amd64
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o main .
+RUN go build -o main .
 
 # Use a smaller base image for the final stage
 FROM alpine:latest
