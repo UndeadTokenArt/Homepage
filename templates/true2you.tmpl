@@ -1,0 +1,53 @@
+<!-- Head Template -->
+{{ template "t2uHead.tmpl" . }}
+<head>
+    <lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True2You - {{ .Title }}</title>
+    <link rel="stylesheet" href="/static/css/true2you.css">
+    <script src="/static/js/true2you.js"></script>
+</head>
+
+<!-- Navigation options at top Template -->
+{{ template "t2uNav.tmpl" . }}
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#jewelry">Jewelry</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+<!-- Sidebar Template -->
+{{ template "t2uSidebar.tmpl" . }}
+    <aside>
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a href="/true2you/link1">Link 1</a></li>
+            <li><a href="/true2you/link2">Link 2</a></li>
+            <li><a href="/true2you/link3">Link 3</a></li>
+        </ul>
+    </aside>
+
+<!-- Items Template -->
+{{ template "t2uItems.tmpl" . }}
+    <section id="items">
+        <h2>Items</h2>
+        <ul>
+            {{ range .Items }}
+                <li>{{ .Name }} - {{ .Description }}</li>
+            {{ end }}
+        </ul>
+    </section>
+
+<!-- Body Template -->
+{{ template "t2uBody.tmpl" . }}
+<body>
+    {{ template "t2uHeader.tmpl" . }}
+
+    <main>
+        {{ .Content }}
+    </main>
+{{ template "t2uFooter.tmpl" . }}
