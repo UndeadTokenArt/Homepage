@@ -74,6 +74,7 @@ func registerRoutes(r *gin.Engine) {
 		c.HTML(http.StatusOK, "group.tmpl", gin.H{"Code": code, "IsDM": isDM})
 	})
 
+	// WebSocket endpoint
 	r.GET("/ws/:code", func(c *gin.Context) {
 		uid := uidFromCookie(c)
 		code := strings.ToUpper(c.Param("code"))
@@ -116,6 +117,8 @@ func registerRoutes(r *gin.Engine) {
 				continue
 			}
 			switch in.Type {
+			case "ping":
+				conn.WriteMessage(websocket.TextMessage, []byte(`{"type":"pong"}`))
 			case "addPlayer":
 				name := strings.TrimSpace(getStr(in.Data, "name"))
 				init := getInt(in.Data, "initiative")

@@ -7,19 +7,26 @@
   const nextBtn = document.getElementById('nextBtn');
 
   const ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws/${ctx.code}`);
+  
 
-  ws.addEventListener('message', (ev) => {
-    const msg = JSON.parse(ev.data);
-    if (msg.type === 'state') {
-      const { round, turn, entries, dmUid } = msg.data;
-      roundEl.textContent = round;
-      turnEl.textContent = entries.length ? (turn + 1) : 0;
-      render(entries, turn);
-      if (!ctx.isDM) {
-        document.querySelector('small.text-muted')?.classList.add('d-none');
-      }
+  // Ping/pong keepalive
+  let pingInterval = setInterval(() => {
+    if (ws.readyState === 1) ws.send(JSON.stringify({ type: 'ping' }));
+    }, 20000); // every 20 seconds
+
+ws.addEventListener('message', (ev) => {
+  const msg = JSON.parse(ev.data);
+  if (msg.type === 'pong') return; // ignore pong
+  if (msg.type === 'state') {
+    const { round, turn, entries, dmUid } = msg.data;
+    roundEl.textContent = round;
+    turnEl.textContent = entries.length ? (turn + 1) : 0;
+    render(entries, turn);
+    if (!ctx.isDM) {
+      document.querySelector('small.text-muted')?.classList.add('d-none');
     }
-  });
+  }
+});
 
   function render(entries, turn) {
     list.innerHTML = '';
@@ -71,7 +78,8 @@
       right.className = 'd-flex align-items-center gap-2';
       
       // HP display for monsters
-      if (e.type === 'monster' && ctx.isDM) {
+      // Damage button for monsters (DM only)r45ree34eertgyy 5tv5t666666ytgyyyyyyyyyyyyyhgggyghhhtygtr5
+     if (e.type === 'monster' && ctx.isDM) {
         const hpWrap = document.createElement('div');
         hpWrap.style.minWidth = '120px'; 
         hpWrap.className = 'text-end';
