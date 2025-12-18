@@ -1,4 +1,4 @@
-# Homepage
+# The Undead Token Homepage
 
 ## Description
 This project is a web application designed to serve my homepage. It includes various features such as routing, templates, and static assets like CSS and JavaScript files. The application is built using Go and follows a modular structure for better maintainability.
