@@ -13,8 +13,8 @@ RUN go mod download
 # Copy the source code
 COPY . .
 
-# Build the application
-RUN go build -o main .
+# Build the application (static binary for Alpine)
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -o main .
 
 # Use a smaller base image for the final stage
 FROM alpine:latest
